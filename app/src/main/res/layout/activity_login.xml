@@ -81,7 +81,6 @@
         android:id="@+id/btnlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:background="#719FB0"
         android:fontFamily="@font/poppinssb"
         android:text="Login"

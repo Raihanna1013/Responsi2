@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#F8F8F8"
     android:orientation="vertical"
     tools:context=".UI.Fragment.Payment">
@@ -16,61 +17,45 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="#CCD1E4">
+            android:background="#F8F8F8"
+            android:orientation="vertical">
+
+            <com.budiyev.android.codescanner.CodeScannerView
+                android:id="@+id/scanner_view"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                app:autoFocusButtonVisible="true"
+                app:flashButtonColor="@color/white"
+                app:flashButtonVisible="true" />
+
+            <TextView
+                android:id="@+id/hasilscan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:text="Hasil Scan"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="FRAGMENT PAYMENT"
-                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:text="or input yout code payment"/>
 
-            <LinearLayout
-                android:layout_gravity="center_horizontal"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
-                android:background="#6998AB">
+            <TextView
+                android:id="@+id/tvcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableTop="@drawable/pay"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:text="Pay"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="70dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:drawableTop="@drawable/history"
-                    android:text="History"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:drawableTop="@drawable/akun"
-                    android:text="Account"
-                    android:textColor="@color/white"
-                    android:textSize="20sp" />
-            </LinearLayout>
+
         </LinearLayout>
 
 

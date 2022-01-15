@@ -1,8 +1,10 @@
-package com.example.paymu;
+package com.example.paymu.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.paymu.R;
 
 public class ProfileActivity extends AppCompatActivity {
 

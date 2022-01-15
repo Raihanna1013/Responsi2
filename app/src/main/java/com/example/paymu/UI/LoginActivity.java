@@ -1,31 +1,33 @@
 package com.example.paymu.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.se.omapi.Session;
+import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.paymu.MainActivity;
 import com.example.paymu.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText Email, Password;
-    Button Login;
+    TextView tvreg, tvpas1;
+    EditText etmail, etpas;
+    Button login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Email = findViewById(R.id.email);
-        Password = findViewById(R.id.password);
-        Login = findViewById(R.id.btnlogin);
-
-        Login.setOnClickListener(v -> {
-           Intent i = new Intent(this, MainActivity.class);
-           startActivity(i);
+        login.setOnClickListener(v -> {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
         });
 
     }

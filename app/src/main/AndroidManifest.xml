@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Paymu">
         <activity
+            android:name=".UI.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".UI.RecoveryActivity"
             android:exported="false" />
         <activity

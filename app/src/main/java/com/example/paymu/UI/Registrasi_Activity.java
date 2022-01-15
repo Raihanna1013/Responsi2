@@ -29,6 +29,7 @@ public class Registrasi_Activity extends AppCompatActivity {
         back = findViewById(R.id.back);
 
         back.setOnClickListener(v -> {
+        back.setOnClickListener(v -> {
             Intent i = new Intent(this, LoginActivity.class );
             startActivity(i);
         });

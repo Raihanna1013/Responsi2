@@ -23,6 +23,5 @@ public class RecoveryActivity extends AppCompatActivity {
             Intent i = new Intent(this, LoginActivity.class );
             startActivity(i);
         });
-
     }
 }
