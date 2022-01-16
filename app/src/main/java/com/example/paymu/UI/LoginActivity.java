@@ -17,13 +17,14 @@ import com.example.paymu.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    TextView tvreg, tvpas1;
-    EditText etmail, etpas;
+
     Button login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        login = findViewById(R.id.btnlogin);
 
         login.setOnClickListener(v -> {
             Intent i = new Intent(this, MainActivity.class);

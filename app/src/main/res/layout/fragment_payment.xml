@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#F8F8F8"
     android:orientation="vertical"
-    tools:context=".UI.Fragment.Payment">
+    tools:context=".UI.Fragment.PaymentFragment">
 
     <ScrollView
         android:layout_width="match_parent"

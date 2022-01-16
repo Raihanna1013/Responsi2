@@ -3,13 +3,18 @@ package com.example.paymu.UI.Fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.paymu.Adapter;
+import com.example.paymu.Data.Model.DataTransaksi;
 import com.example.paymu.R;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +24,7 @@ import com.example.paymu.R;
 public class HistoryFragmen extends Fragment {
 
     RecyclerView recyclerView;
+    ArrayList<DataTransaksi> dataholder;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -62,7 +68,26 @@ public class HistoryFragmen extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_history, container, false);
+        recyclerView = view.findViewById(R.id.recview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        dataholder = new ArrayList<>();
+
+        DataTransaksi ob1 = new DataTransaksi("19 Januari 2022","PLN Bill", "Success");
+        dataholder.add(ob1);
+
+        DataTransaksi ob2 = new DataTransaksi("03 Maret 2018", "Sopypay", "Failed");
+        dataholder.add(ob2);
+
+        DataTransaksi ob3 = new DataTransaksi("15 Agustus 2019", "BPJS BILL", "Success");
+        dataholder.add(ob3);
+
+        DataTransaksi ob4 = new DataTransaksi("15 Januari 2021", "Saldo OVO", "Failed");
+        dataholder.add(ob4);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history, container, false);
+
+        recyclerView.setAdapter(new Adapter(dataholder,this));
+        return view;
     }
 }

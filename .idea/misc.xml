@@ -18,7 +18,7 @@
         <entry key="..\:/Android_Project/Paymu/app/src/main/res/layout/activity_profile.xml" value="0.1" />
         <entry key="..\:/Android_Project/Paymu/app/src/main/res/layout/activity_recovery.xml" value="0.2" />
         <entry key="..\:/Android_Project/Paymu/app/src/main/res/layout/activity_registrasi.xml" value="0.1" />
-        <entry key="..\:/Android_Project/Paymu/app/src/main/res/layout/display_transaksi.xml" value="0.12" />
+        <entry key="..\:/Android_Project/Paymu/app/src/main/res/layout/display_transaksi.xml" value="0.25" />
         <entry key="..\:/Android_Project/Paymu/app/src/main/res/layout/fragment_history.xml" value="0.14" />
         <entry key="..\:/Android_Project/Paymu/app/src/main/res/layout/fragment_home_frgament.xml" value="0.25" />
         <entry key="..\:/Android_Project/Paymu/app/src/main/res/layout/fragment_payment.xml" value="0.17326732673267325" />
@@ -26,7 +26,7 @@
         <entry key="..\:/Android_Project/Paymu/app/src/main/res/layout/fragment_setting.xml" value="0.1" />
         <entry key="..\:/Android_Project/Paymu/app/src/main/res/layout/hometoolbar.xml" value="0.14" />
         <entry key="..\:/Android_Project/Paymu/app/src/main/res/layout/toolbar.xml" value="0.1" />
-        <entry key="..\:/Android_Project/Paymu/app/src/main/res/menu/bottomnav.xml" value="0.33" />
+        <entry key="..\:/Android_Project/Paymu/app/src/main/res/menu/bottomnav.xml" value="0.2235294117647059" />
         <entry key="..\:/Android_Project/Paymu/app/src/main/res/menu/logout.xml" value="0.15" />
       </map>
     </option>

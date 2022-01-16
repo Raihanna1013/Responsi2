@@ -26,7 +26,7 @@ public class Registrasi_Activity extends AppCompatActivity {
         Password2 = findViewById(R.id.password);
         Telepon = findViewById(R.id.telepon);
         registrasi = findViewById(R.id.btnRegistrasi);
-        back = findViewById(R.id.back);
+        back = findViewById(R.id.back1);
 
 
         back.setOnClickListener(v -> {

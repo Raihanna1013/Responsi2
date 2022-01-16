@@ -3,6 +3,7 @@ package com.example.paymu.UI.Fragment;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
@@ -25,15 +26,16 @@ import com.google.zxing.Result;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Payment#newInstance} factory method to
+ * Use the {@link PaymentFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Payment<BarcodeDetector> extends Fragment {
+public class PaymentFragment<BarcodeDetector> extends Fragment {
 
     private static final int RC_PERMISSION = 10;
     private boolean mPermissionGranted;
     private CodeScanner mCodeScanner;
     TextView code, hasil;
+    SharedPreferences preferences;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -44,7 +46,7 @@ public class Payment<BarcodeDetector> extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Payment() {
+    public PaymentFragment() {
         // Required empty public constructor
     }
 
@@ -57,8 +59,8 @@ public class Payment<BarcodeDetector> extends Fragment {
      * @return A new instance of fragment Payment.
      */
     // TODO: Rename and change types and number of parameters
-    public static Payment newInstance(String param1, String param2) {
-        Payment fragment = new Payment();
+    public static PaymentFragment newInstance(String param1, String param2) {
+        PaymentFragment fragment = new PaymentFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -83,7 +85,7 @@ public class Payment<BarcodeDetector> extends Fragment {
         code = view.findViewById(R.id.tvcode);
         hasil = view.findViewById(R.id.hasilscan);
         code.setOnClickListener(v -> {
-            startActivity(new Intent(getActivity(), Payment.class));
+            startActivity(new Intent(getActivity(), PaymentFragment.class));
         });
 
         if(ContextCompat.checkSelfPermission(getContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED){
@@ -108,6 +110,13 @@ public class Payment<BarcodeDetector> extends Fragment {
                 mCodeScanner.startPreview();
             }
         });
+
+        preferences = activity.getSharedPreferences("code", 0);
+        hasil.setText(preferences.getString("code", ""));
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.clear();
+        editor.apply();
+
         return view;
     }
 

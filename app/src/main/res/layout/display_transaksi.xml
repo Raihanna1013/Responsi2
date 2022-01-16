@@ -7,14 +7,15 @@
     android:id="@+id/item_list"
     android:background="#F8F8F8"
     android:elevation="4dp">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/bgedittext"
-        android:padding="16dp"
         android:layout_margin="10dp"
-        android:orientation="vertical">
+        android:background="@drawable/bgedittext"
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <TextView
             android:id="@+id/Tanggal"
@@ -23,24 +24,25 @@
             android:text="Tanggal"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/Status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="right"
             android:layout_marginStart="250dp"
+            android:gravity="right"
             android:text="Status"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
+
         <TextView
             android:id="@+id/Transaksi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:gravity="right"
-            android:layout_marginStart="400dp"
             android:text="Transaksi"
             android:textColor="@color/black"
             android:textSize="20sp"
